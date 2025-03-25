@@ -49,12 +49,32 @@ const catagory = new Swiper(".mySwiper2", {
   },
 });
 
-document.querySelectorAll('button').forEach(button => {
-  button.addEventListener('click', () => {
-    const content = button.nextElementSibling;
-    const arrow = button.querySelector('svg');
+
+// sidebar
+document.querySelectorAll('.sidebarbtn').forEach(sidebarbtn => {
+  sidebarbtn.addEventListener('click', () => {
+    const content = sidebarbtn.nextElementSibling;
+    const arrow = sidebarbtn.querySelector('svg');
 
     content.classList.toggle('hidden');
     arrow.classList.toggle('rotate-180');
+  });
+});
+
+
+// by ratting
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownSelect = document.getElementById("dropdownSelect");
+  const arrowIcon = document.getElementById("arrowIcon");
+
+  // Toggle arrow on focus
+  dropdownSelect.addEventListener("click", function () {
+    arrowIcon.classList.toggle("rotate-180");
+  });
+
+  // Reset arrow when focus is lost
+  dropdownSelect.addEventListener("blur", function () {
+    arrowIcon.classList.remove("rotate-180");
   });
 });
