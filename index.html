@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cyber | Home</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body class="font-inter min-w-80 select-none">
+  <!-- Header section -->
+
+  <header class=" py-4 border-b border-forbackground-gray">
+    <div class="container">
+      <nav class="flex items-center justify-between gap-14" aria-label="Global">
+        <div class="flex">
+          <a href="#" class="-m-1.5 p-1.5">
+            <img src="src/assets/icon/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="hidden lg:flex items-center relative rounded-lg overflow-hidden grow">
+          <input
+            class="w-full pl-12 pr-10 py-4 font-normal text-sm bg-[#F5F5F5] focus:outline-hidden placeholder:text-[#656565]/30"
+            type="text" placeholder="Search" />
+          <button class="absolute top-1/2 left-3 -translate-y-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none">
+              <path stroke="#989898" stroke-linecap="round" stroke-width="1.5"
+                d="m20.933 20-3.778-3.784m2.094-5.058a7.158 7.158 0 1 1-14.316 0 7.158 7.158 0 0 1 14.316 0v0Z" />
+            </svg>
+          </button>
+        </div>
+        <ul class=" hidden lg:flex gap-12">
+          <li class=""><a href="#" class="nav-item text-primary">Home</a></li>
+          <li class=" ">
+            <a href="#" class="nav-item">About</a>
+          </li>
+          <li class=" ">
+            <a href="#" class="nav-item">Contact Us</a>
+          </li>
+          <li class=" ">
+            <a href="#" class="nav-item">Blog</a>
+          </li>
+        </ul>
+
+        <div class="flex relative z-50 lg:hidden">
+          <button id="open-menu" type="button"
+            class="-m-2.5 items-center justify-center rounded-md p-2.5 text-gray-700 lg:hidden">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+
+          <button id="close-menu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 hidden">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:justify-end items-center gap-6">
+          <button class="w-[32px] h-[32px] cursor-pointer">
+            <img src="src/assets/icon/wishlist.png" alt="wish" />
+          </button>
+          <a href="#" class="w-[32px] h-[32px]">
+            <img src="src/assets/icon/card.png" alt="card" />
+          </a>
+          <button class="w-[32px] h-[32px] cursor-pointer">
+            <img src="src/assets/icon/user.png" alt="user" />
+          </button>
+        </div>
+      </nav>
+    </div>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden relative" role="dialog" aria-modal="true">
+      <div id="mobile-menu" class="absolute top-0 right-0 z-40 h-auto bg-white sm:max-w-sm p-6 hidden">
+        <div class="space-y-2 lg:flex">
+          <a href="#" class="block nav-item">Home</a>
+          <a href="#" class="block nav-item">About</a>
+          <a href="#" class="block nav-item">Contact
+            Us</a>
+          <a href="#" class="block nav-item">Blog</a>
+        </div>
+        <div class="flex justify-end items-center">
+          <div class=" relative rounded-lg mr-5 overflow-hidden">
+            <input class="w-full pl-12 pr-10 py-4 font-normal text-xs bg-[#F5F5F5] focus:outline-hidden" type="text"
+              placeholder="Search" />
+            <button class="absolute top-1/2 left-3 -translate-y-1/2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none">
+                <path stroke="#989898" stroke-linecap="round" stroke-width="1.5"
+                  d="m20.933 20-3.778-3.784m2.094-5.058a7.158 7.158 0 1 1-14.316 0 7.158 7.158 0 0 1 14.316 0v0Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="w-[32px] h-[32px] cursor-pointer">
+              <img src="src/assets/icon/wishlist.png" alt="wish" />
+            </button>
+            <button class="w-[32px] h-[32px] cursor-pointer">
+              <img src="src/assets/icon/card.png" alt="card" />
+            </button>
+            <button class="w-[32px] h-[32px] cursor-pointer">
+              <img src="src/assets/icon/user.png" alt="user" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- banar section -->
+  <section class="bg-primary">
+    <div class="container">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="w-full sm:w-[calc(100%-36.25%)] pt-4 sm:pt-0">
+          <span class="text-white/40 font-semibold">Pro.Beyond.</span>
+          <h1 class="text-5xl sm:text-6xl lg:text-8xl text-white font-thin my-6">IPhone 14 <span
+              class="font-semibold">Pro</span>
+          </h1>
+          <p class="text-lg text-forground-secondary">Created to change everything for the better. For everyone</p>
+          <a href="product.html" class="btn mt-6 inline-block text-white">Shop Now</a>
+        </div>
+        <div class="w-full sm:w-[36.25%]">
+          <img src="src/assets/icon/iphone.png" alt="iphone">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product banar section -->
+  <section class="flex flex-col lg:flex-row max-w-[1440px] mx-auto">
+    <div class="w-full lg:w-1/2">
+      <div class="flex items-center gap-4">
+        <div class="w-full sm:w-[40.555%]">
+          <img src="src/assets/icon/PlayStation.png" alt="apple">
+        </div>
+        <div class="w-full sm:w-[calc(100%-40.555%)] pt-4 sm:pt-0">
+          <div class="max-w-[338px]">
+            <h2 class="text-4xl lg:text-5xl text-primary font-medium pb-4">Playstation 5
+            </h2>
+            <p>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation
+              experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row">
+        <div class="w-full sm:w-1/2 flex items-center gap-4">
+          <div class="w-full sm:w-[40.555%]">
+            <img src="src/assets/icon/apple-airpods.png" alt="apple">
+          </div>
+          <div class="w-full sm:w-[calc(100%-40.555%)] pt-4 sm:pt-0">
+            <div class="max-w-[160px]">
+              <h2 class="text-2xl lg:text-3xl text-primary font-thin pb-4 tracking-wider">Apple
+                AirPods <span class="font-medium">Max</span>
+              </h2>
+              <p>Computational audio. Listen, it's powerful
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full sm:w-1/2 flex items-center gap-4 bg-[#353535]">
+          <div class="w-full sm:w-[40.555%]">
+            <img src="src/assets/icon/apple-vision-pro.png" alt="apple">
+          </div>
+          <div class="w-full sm:w-[calc(100%-40.555%)] pt-4 sm:pt-0">
+            <div class="max-w-[160px]">
+              <h2 class="text-2xl lg:text-3xl text-white font-thin pb-4 tracking-wider">Apple
+                Vision <span class="font-medium">Pro</span>
+              </h2>
+              <p>An immersive way to experience entertainment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full lg:w-1/2 bg-secondary pl-14">
+      <div class="flex items-center h-full py-4 lg:py-0">
+        <div class="w-full sm:w-[calc(100%-40.555%)] pr-3">
+          <div class="max-w-[360px]">
+            <h2 class="text-5xl lg:text-6xl text-primary font-thin tracking-widest">Macbook <span
+                class="font-medium">Air</span>
+            </h2>
+            <p class=" my-4 tracking-wider">The new 15‑inch MacBook Air makes room for more of what you
+              love with a spacious Liquid Retina display. </p>
+            <a href="#" class="btn inline-block">Shop Now</a>
+          </div>
+        </div>
+        <div class="w-full sm:w-[40.555%]">
+          <img class="" src="src/assets/icon/MacBookPro-14.png" alt="iphone">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse By Category -->
+  <section class="bg-[#FAFAFA] py-10 md:py-20">
+    <div class="container">
+      <div class="flex items-center justify-between  relative">
+        <div class="">
+          <h3>Browse By Category</h3>
+        </div>
+
+        <div class="flex">
+          <button
+            class="flex items-center justify-center swiper2-button-prev w-11 h-11 bg-transparent rounded-full hover:bg-secondary transition-all duration-500 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" fill="none">
+              <path fill="#000"
+                d="M12.333 23.667a.987.987 0 0 1-.706-.294L.96 12.707a1 1 0 0 1 0-1.414L11.627.627A1 1 0 0 1 13.04 2.04L3.08 12l9.96 9.96a1 1 0 0 1-.707 1.707Z" />
+            </svg>
+          </button>
+          <button
+            class="flex items-center justify-center swiper2-button-next w-11 h-11 bg-transparent rounded-full hover:bg-secondary transition-all duration-500 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" fill="none">
+              <path fill="#000"
+                d="M1.667.333a.987.987 0 0 1 .706.294L13.04 11.293a1 1 0 0 1 0 1.414L2.373 23.373A1 1 0 0 1 .96 21.96L10.92 12 .96 2.04A1 1 0 0 1 1.667.333Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8">
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_868)">
+                    <path
+                      d="M38.9375 6.125H17.0625C15.5523 6.125 14.3281 7.34922 14.3281 8.85938V47.1406C14.3281 48.6508 15.5523 49.875 17.0625 49.875H38.9375C40.4477 49.875 41.6719 48.6508 41.6719 47.1406V8.85938C41.6719 7.34922 40.4477 6.125 38.9375 6.125Z"
+                      class="group-hover:stroke-white transition-all duration-700" stroke="black" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M25.6667 7H31.1354" class="group-hover:stroke-white transition-all duration-700"
+                      stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M28 44.0052V44.0305" class="group-hover:stroke-white transition-all duration-700"
+                      stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <line x1="15.1667" class="group-hover:stroke-white transition-all duration-700" y1="39.8334"
+                      x2="40.8333" y2="39.8334" stroke="black" stroke-width="2" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_868">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">Phones</h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_613)">
+                    <path
+                      d="M46.6667 9.33337H9.33333C8.04467 9.33337 7 10.378 7 11.6667V35C7 36.2887 8.04467 37.3334 9.33333 37.3334H46.6667C47.9553 37.3334 49 36.2887 49 35V11.6667C49 10.378 47.9553 9.33337 46.6667 9.33337Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16.3333 46.6666H39.6667" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M21 37.3334V46.6667" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M35 37.3334V46.6667" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8 32H48" stroke="black" class="group-hover:stroke-white transition-all duration-700"
+                      stroke-width="2" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_613">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">
+                  Computers
+                </h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_629)">
+                    <path
+                      d="M35 14H21C17.134 14 14 17.134 14 21V35C14 38.866 17.134 42 21 42H35C38.866 42 42 38.866 42 35V21C42 17.134 38.866 14 35 14Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M21 42V49H35V42" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M21 14V7H35V14" stroke="black" class="group-hover:stroke-white transition-all duration-700"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <line x1="24" y1="23" x2="24" y2="34" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" />
+                    <line x1="28" y1="28" x2="28" y2="34" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" />
+                    <line x1="32" y1="26" x2="32" y2="34" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_629">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">
+                  SmartWatch
+                </h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_6)">
+                    <path
+                      d="M11.6667 16.3334H14C15.2377 16.3334 16.4247 15.8417 17.2998 14.9665C18.175 14.0914 18.6667 12.9044 18.6667 11.6667C18.6667 11.0479 18.9125 10.4544 19.3501 10.0168C19.7877 9.57921 20.3812 9.33337 21 9.33337H35C35.6188 9.33337 36.2123 9.57921 36.6499 10.0168C37.0875 10.4544 37.3333 11.0479 37.3333 11.6667C37.3333 12.9044 37.825 14.0914 38.7002 14.9665C39.5753 15.8417 40.7623 16.3334 42 16.3334H44.3333C45.571 16.3334 46.758 16.825 47.6332 17.7002C48.5083 18.5754 49 19.7624 49 21V42C49 43.2377 48.5083 44.4247 47.6332 45.2999C46.758 46.175 45.571 46.6667 44.3333 46.6667H11.6667C10.429 46.6667 9.242 46.175 8.36683 45.2999C7.49167 44.4247 7 43.2377 7 42V21C7 19.7624 7.49167 18.5754 8.36683 17.7002C9.242 16.825 10.429 16.3334 11.6667 16.3334"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M28 37.3334C31.866 37.3334 35 34.1994 35 30.3334C35 26.4674 31.866 23.3334 28 23.3334C24.134 23.3334 21 26.4674 21 30.3334C21 34.1994 24.134 37.3334 28 37.3334Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_6">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">Camera</h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_644)">
+                    <path
+                      d="M16.3333 30.3334H14C11.4227 30.3334 9.33331 32.4227 9.33331 35V42C9.33331 44.5774 11.4227 46.6667 14 46.6667H16.3333C18.9106 46.6667 21 44.5774 21 42V35C21 32.4227 18.9106 30.3334 16.3333 30.3334Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M42 30.3334H39.6667C37.0893 30.3334 35 32.4227 35 35V42C35 44.5774 37.0893 46.6667 39.6667 46.6667H42C44.5773 46.6667 46.6667 44.5774 46.6667 42V35C46.6667 32.4227 44.5773 30.3334 42 30.3334Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M9.33331 35V28C9.33331 23.0493 11.3 18.3014 14.8007 14.8007C18.3013 11.3 23.0493 9.33337 28 9.33337C32.9507 9.33337 37.6986 11.3 41.1993 14.8007C44.7 18.3014 46.6666 23.0493 46.6666 28V35"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_644">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">
+                  HeadPhones
+                </h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_809)">
+                    <path
+                      d="M46.6666 14H9.33329C6.75596 14 4.66663 16.0893 4.66663 18.6667V37.3333C4.66663 39.9107 6.75596 42 9.33329 42H46.6666C49.244 42 51.3333 39.9107 51.3333 37.3333V18.6667C51.3333 16.0893 49.244 14 46.6666 14Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 28H23.3333M18.6667 23.3334V32.6667" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M35 25.6666V25.6908" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M42 30.3333V30.3574" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_809">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">Gaming</h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_809)">
+                    <path
+                      d="M46.6666 14H9.33329C6.75596 14 4.66663 16.0893 4.66663 18.6667V37.3333C4.66663 39.9107 6.75596 42 9.33329 42H46.6666C49.244 42 51.3333 39.9107 51.3333 37.3333V18.6667C51.3333 16.0893 49.244 14 46.6666 14Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 28H23.3333M18.6667 23.3334V32.6667" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M35 25.6666V25.6908" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M42 30.3333V30.3574" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_809">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">Gaming</h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_809)">
+                    <path
+                      d="M46.6666 14H9.33329C6.75596 14 4.66663 16.0893 4.66663 18.6667V37.3333C4.66663 39.9107 6.75596 42 9.33329 42H46.6666C49.244 42 51.3333 39.9107 51.3333 37.3333V18.6667C51.3333 16.0893 49.244 14 46.6666 14Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 28H23.3333M18.6667 23.3334V32.6667" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M35 25.6666V25.6908" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M42 30.3333V30.3574" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_809">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">Gaming</h5>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                class="p-6 flex flex-col items-center gap-2 group bg-secondary hover:bg-forbackground-gray rounded-2xl transition-all duration-700">
+                <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1409_809)">
+                    <path
+                      d="M46.6666 14H9.33329C6.75596 14 4.66663 16.0893 4.66663 18.6667V37.3333C4.66663 39.9107 6.75596 42 9.33329 42H46.6666C49.244 42 51.3333 39.9107 51.3333 37.3333V18.6667C51.3333 16.0893 49.244 14 46.6666 14Z"
+                      stroke="black" class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 28H23.3333M18.6667 23.3334V32.6667" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M35 25.6666V25.6908" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M42 30.3333V30.3574" stroke="black"
+                      class="group-hover:stroke-white transition-all duration-700" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1409_809">
+                      <rect width="56" height="56" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h5 class="group-hover:text-white transition-all duration-700">Gaming</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product section -->
+  <section class="container py-10 md:py-14">
+    <div class="space-x-8 space-y-4">
+      <button
+        class="text-lg text-primary font-medium hover:text-primary underline underline-offset-8 decoration-2 transition-all duration-500">New
+        Arrival</button>
+      <button
+        class="text-lg text-[#8B8B8B] font-medium hover:text-primary hover:underline underline-offset-8 decoration-2 transition-all duration-500">Bestseller</button>
+      <button
+        class="text-lg text-[#8B8B8B] font-medium hover:text-primary hover:underline underline-offset-8 decoration-2 transition-all duration-500">Featured
+        Products</button>
+    </div>
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+              <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-1.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+              <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-2.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+              <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-3.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+              <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-4.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+              <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-5.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FF0000">
+              <path stroke="#FF0000" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-6.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+              <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-7.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+        <div class="flex justify-end">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+              <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="src/assets/icon/product-8.png" alt="product">
+        </div>
+        <div class="text-center tracking-wider">
+          <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+          <h3 class="font-semibold">$900</h3>
+        </div>
+        <div class="flex justify-center mt-6">
+          <a href="#" class="btn-black">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Product details -->
+  <section class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1440px] mx-auto">
+    <div class="pb-14 ">
+      <div class=" xl:h-[360px]">
+        <img class="w-full" src="src/assets/icon/product-details-1.png" alt="product">
+      </div>
+      <div class="px-8 space-y-4 tracking-wider">
+        <h2 class="text-3xl font-light text-primary">Popular Products</h2>
+        <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+        </p>
+        <button class="btn">Shop Now</button>
+      </div>
+    </div>
+    <div class="pb-14 bg-[#F9F9F9]">
+      <div class=" xl:h-[360px]">
+        <img class="w-full" src="src/assets/icon/product-details-2.png" alt="product">
+      </div>
+      <div class="px-8 space-y-4 tracking-wider">
+        <h2 class="text-3xl font-light text-primary">Ipad Pro</h2>
+        <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+        </p>
+        <button class="btn">Shop Now</button>
+      </div>
+    </div>
+    <div class="pb-14 bg-[#EAEAEA]">
+      <div class=" xl:h-[360px]">
+        <img class="w-full" src="src/assets/icon/product-details-3.png" alt="product">
+      </div>
+      <div class="px-8 space-y-4 tracking-wider">
+        <h2 class="text-3xl font-light text-primary">Samsung Galaxy </h2>
+        <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+        </p>
+        <button class="btn">Shop Now</button>
+      </div>
+    </div>
+    <div class="pb-14 bg-[#2C2C2C]">
+      <div class=" xl:h-[360px]">
+        <img class="w-full" src="src/assets/icon/product-details-4.png" alt="product">
+      </div>
+      <div class="px-8 space-y-4 tracking-wider">
+        <h2 class="text-3xl font-light text-white">Macbook Pro</h2>
+        <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+        </p>
+        <button class="btn text-white">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discount sedtion -->
+  <section class="py-20">
+    <div class="container">
+      <div class="mb-8">
+        <h3>Discounts up to -50%</h3>
+      </div>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+          <div class="flex justify-end">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+                <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                  d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="src/assets/icon/product-1.png" alt="product">
+          </div>
+          <div class="text-center tracking-wider">
+            <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+            <h3 class="font-semibold">$900</h3>
+          </div>
+          <div class="flex justify-center mt-6">
+            <a href="#" class="btn-black">Buy Now</a>
+          </div>
+        </div>
+        <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+          <div class="flex justify-end">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+                <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                  d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="src/assets/icon/product-2.png" alt="product">
+          </div>
+          <div class="text-center tracking-wider">
+            <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+            <h3 class="font-semibold">$900</h3>
+          </div>
+          <div class="flex justify-center mt-6">
+            <a href="#" class="btn-black">Buy Now</a>
+          </div>
+        </div>
+        <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+          <div class="flex justify-end">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+                <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                  d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="src/assets/icon/product-3.png" alt="product">
+          </div>
+          <div class="text-center tracking-wider">
+            <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+            <h3 class="font-semibold">$900</h3>
+          </div>
+          <div class="flex justify-center mt-6">
+            <a href="#" class="btn-black">Buy Now</a>
+          </div>
+        </div>
+        <div class="px-4 py-6 bg-forbackground-gray-light rounded-lg space-y-4">
+          <div class="flex justify-end">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+                <path stroke="#919191" stroke-opacity=".77" stroke-width="1.4"
+                  d="m5.934 18.544 9.381 8.813c.325.305.487.457.685.457.198 0 .36-.152.685-.457l9.38-8.813a6.938 6.938 0 0 0 .732-9.31l-.413-.53C23.76 5.32 18.493 5.887 16.65 9.751a.719.719 0 0 1-1.298 0C13.507 5.888 8.24 5.32 5.615 8.703l-.412.532a6.938 6.938 0 0 0 .731 9.31Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="src/assets/icon/product-4.png" alt="product">
+          </div>
+          <div class="text-center tracking-wider">
+            <p class="text-base text-primary mb-4">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
+            <h3 class="font-semibold">$900</h3>
+          </div>
+          <div class="flex justify-center mt-6">
+            <a href="#" class="btn-black">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- banar product sale -->
+  <section class="">
+    <div class="max-w-[1440px] mx-auto bg-cover bg-no-repeat bg-center "
+      style="background-image: url(src/assets/icon/banar-product.png);">
+      <div class="text-center pt-5 pb-4 sm:pt-10 sm:pb-8 lg:pt-20 lg:pb-12 xl:pt-40 xl:pb-24">
+        <h2 class="text-3xl md:text-5xl lg:text-7xl text-white font-thin mb-6">Big Summer <span
+            class="font-medium">Sale</span> </h2>
+        <button class="btn text-white mt-4 sm:mt-10">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="bg-primary text-footer py-6 sm:py-12 lg:py-24">
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Left Section -->
+      <div>
+        <div class="mb-6">
+          <img src="src/assets/icon/logo-black.png" alt="logo">
+        </div>
+        <p class="text-footer">
+          We are a residential interior design firm located in Portland. Our boutique-studio offers more than
+        </p>
+
+      </div>
+
+      <!-- Center Section -->
+      <div>
+        <h5 class="text-white font-semibold mb-4">Services</h5>
+        <ul class=" space-y-2">
+          <li><a class="text-sm font-normal" href="#">Bonus program</a></li>
+          <li><a class="text-sm font-normal" href="#">Gift cards</a></li>
+          <li><a class="text-sm font-normal" href="#">Credit and payment</a></li>
+          <li><a class="text-sm font-normal" href="#">Service contracts</a></li>
+          <li><a class="text-sm font-normal" href="#">Non-cash account</a></li>
+          <li><a class="text-sm font-normal" href="#">Payment</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Section -->
+      <div>
+        <h5 class=" text-white font-semibold mb-4">Assistance to the buyer</h5>
+        <ul class=" space-y-2">
+          <li><a class="text-sm font-normal" href="#">Find an order</a></li>
+          <li><a class="text-sm font-normal" href="#">Terms of delivery</a></li>
+          <li><a class="text-sm font-normal" href="#">Exchange and return of goods</a></li>
+          <li><a class="text-sm font-normal" href="#">Guarantee</a></li>
+          <li><a class="text-sm font-normal" href="#">Frequently asked questions</a></li>
+          <li><a class="text-sm font-normal" href="#">Terms of use of the site</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mt-6">
+      <div class="flex items-center space-x-4">
+        <a href="#">
+          <img src="src/assets/icon/Twitter.png" alt="Twitter">
+        </a><a href="#">
+          <img src="src/assets/icon/Facebook.png" alt="Facebook">
+        </a><a href="#">
+          <img src="src/assets/icon/Tiktok.png" alt="Tiktok">
+        </a><a href="#">
+          <img src="src/assets/icon/Instagram.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

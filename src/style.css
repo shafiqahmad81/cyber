@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@import 'swiper/css';
+
+@theme {
+
+    /* font family */
+    --font-inter: "Inter", sans-serif;
+
+    /* brakpoint */
+    --breakpoint-1xl: 90rem;    /* 1440px */
+
+    /* colors */
+    --color-primary: #000000;
+    --color-secondary: #EDEDED;
+    --color-forground-primary: #FFFFFF;
+    --color-forground-secondary: #909090;
+    --color-footer: #CFCFCF;
+    --color-forbackground-gray: #353535;
+    --color-forbackground-gray-light: #F6F6F6;
+  }
+
+
+ 
+
+
+  button{
+    @apply cursor-pointer
+  }
+
+  @layer base{
+    h3{
+      @apply text-2xl text-primary font-medium 
+    }
+    h5{
+      @apply text-base font-medium text-primary
+    }
+    p{
+      @apply text-sm text-forground-secondary font-medium
+    }
+  }
+
+  @layer components{
+  
+    .active{
+      @apply text-primary;
+  
+    }
+  
+    .nav-item {
+      @apply text-base font-medium py-2 cursor-pointer text-primary/40 hover:text-primary transition-all duration-700;
+    
+    }
+
+    .btn{
+      @apply border rounded-md px-12 py-3 text-base bg-transparent text-primary font-medium hover:bg-primary/30 transition-all duration-500
+    }
+
+    .btn-black{
+      @apply rounded-lg px-16 py-4 text-base font-medium bg-primary text-white hover:bg-primary/60 transition-all duration-500
+    }
+
+  }
+
+
+
+  @utility container{ 
+    @apply mx-auto px-4;
+    @media (width >= 90rem /* 1440px */) {
+          max-width: var(--breakpoint-1xl) /* 1440px */;
+          padding-inline: 10rem  /* 160px */; 
+      }
+  }
+
+
+  /* Slider */
+
+.swiper-pagination-bullet {
+  @apply bg-white/50 size-3 opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-green-700! size-[14px] border-2 border-white;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply content-[''];
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  @apply w-[60%];
+}
+
+.swiper-button-prev {
+  @apply -top-16 right-[3.25rem] left-auto z-50;
+}
+.swiper-button-next {
+  @apply -top-16 right-0 z-50;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-black;
+}
