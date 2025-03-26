@@ -51,7 +51,7 @@
   @layer components{
   
     .active{
-      @apply text-primary;
+      @apply text-white bg-primary;
   
     }
   
@@ -61,11 +61,11 @@
     }
 
     .btn{
-      @apply border rounded-md px-12 py-3 text-base bg-transparent text-primary font-medium hover:bg-primary/30 transition-all duration-500
+      @apply border border-primary rounded-md px-12 py-3 text-base bg-transparent text-primary font-medium hover:bg-primary/30 transition-all duration-500
     }
 
     .btn-black{
-      @apply rounded-lg px-16 py-4 text-base font-medium bg-primary text-white hover:bg-primary/60 transition-all duration-500
+      @apply border border-primary rounded-lg px-16 py-4 text-base font-medium bg-primary text-white hover:bg-primary/60 transition-all duration-500
     }
 
   }

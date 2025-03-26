@@ -7,6 +7,7 @@ export default defineConfig({
           input: {
             main: path.resolve(__dirname, 'index.html'),
             product: path.resolve(__dirname, 'product.html'),
+            productdetails: path.resolve(__dirname, 'product-details.html'),
           },
         },
       },
